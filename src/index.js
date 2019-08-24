@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 
-ReactDOM.render(<App />, document.getElementById('app'))
+import { App as AppReal } from './components/App'
+
+ReactDOM.render(<AppReal />, document.getElementById('app'))
 
 // App.js
 function App(props) {
