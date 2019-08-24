@@ -4,6 +4,7 @@ import {SearchForm} from "./SearchForm";
 import { GroupSizeQuestion } from './GroupSizeQuestion'
 import { WalkLengthQuestion } from './WalkLengthQuestion'
 import { getMeHuts } from '../api_access'
+import { HuttCard } from './HuttCard';
 
 export const App = () => {
   const [region, setRegion] = useState(null);
@@ -15,7 +16,7 @@ export const App = () => {
     setHuts(null)
     if(!region) {return}
     getMeHuts(region).then(function (values) {
-      console.log(values);
+      console.log(values)
       setHuts(values)
     });
   }, [region]); //recalls the useEffect when the value of region changes
