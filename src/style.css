@@ -1,3 +1,28 @@
-.title {
-  color: pink;
+body {
+  font: 15px/1.5 Proxima Nova, sans serif;
+}
+
+.question {
+  display: flex;
+  padding: 30px;
+}
+
+.q-number {
+  font-size: 40px;
+  padding: 30px;
+  line-height: 1;
+}
+
+.q-text {
+  padding: 30px;
+  max-width: 200px;
+}
+
+.q-input {
+  padding: 30px;
+}
+
+.q-input ul {
+  margin: 0;
+  padding: 0;
 }
