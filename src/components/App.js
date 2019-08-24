@@ -13,19 +13,29 @@ export const App = () => {
   const [groupSize, setGroupSize] = useState(null);
   const [walkLength, setWalkLength] = useState(null);
   const [huts, setHuts] = useState(null);
+  const [allRegions, setRegions] = useState(new Set());
+
+  // hutData = hutData.filter(hut => hut.region != null);
 
   useEffect(() => {
-    setHuts(hutData)
-    if(region == null && huts != null) {
+    setHuts(hutData);
+    hutData.forEach(hut => {
+        allRegions.add(hut.region);
+        if(hut.region == null) {
+            console.log(hut);
+        }
+    });
+    console.log(allRegions);
+    if(region == null) {
         setHuts(hutData)
-    } else if (huts != null) {
-        setHuts(huts.filter(hut => hut.region === region))
+    } else  {
+        setHuts(hutData.filter(hut => hut.region === region))
     }
   }, [region]); //recalls the useEffect when the value of region changes
 
   return (
     <div>
-      <RegionQuestion region={region} setRegion={setRegion}/>
+      <RegionQuestion regions={[...allRegions]} region={region} setRegion={setRegion}/>
       <SearchForm setRegion={setRegion}/>
       <GroupSizeQuestion groupSize={groupSize} setGroupSize={setGroupSize}/>
       <WalkLengthQuestion walkLength={walkLength} setWalkLength={setWalkLength}/>
