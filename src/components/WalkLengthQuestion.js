@@ -14,9 +14,8 @@ export const WalkLengthQuestion = (props) => {
         <ul>
           <li onClick={() => props.setWalkLength({min: 1, max: 5})}>1-5</li>
           <li onClick={() => props.setWalkLength({min: 6, max: 10})}>6-10</li>
-          <li onClick={() => props.setWalkLength({min: 11, max: 15})}>10-</li>
-          <li onClick={() => props.setWalkLength({min: 16, max: 20})}>x</li>
-          <li onClick={() => props.setWalkLength({min: 1, max: 5})}>x</li>
+          <li onClick={() => props.setWalkLength({min: 11, max: 15})}>11-15</li>
+          <li onClick={() => props.setWalkLength({min: 16, max: 20})}>16-20</li>
         </ul>
       </div>
     </div>
