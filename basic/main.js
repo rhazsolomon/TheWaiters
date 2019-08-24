@@ -9,3 +9,8 @@ function getData() {
     document.getElementById("result").innerHTML = xmlHttp.responseText;
     return xmlHttp.responseText;
 }
+
+async function getData() {
+    const headers = { "x-api-key": "bU5t3d5QOv5V0QNWU36yp5nGDhEtmLDc6UbTfvPM" }
+    await fetch('https://api.doc.govt.nz/v2/huts', { headers }).then(res => res.json())
+}
