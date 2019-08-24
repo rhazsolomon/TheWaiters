@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { RegionQuestion } from './RegionQuestion'
+import {SearchForm} from "./SearchForm";
 import { GroupSizeQuestion } from './GroupSizeQuestion'
 import { WalkLengthQuestion } from './WalkLengthQuestion'
 import { getMeHuts } from '../api_access'
@@ -21,9 +22,10 @@ export const App = () => {
 
   return (
     <div>
-      <RegionQuestion region={region} setRegion={setRegion} />
-      <GroupSizeQuestion groupSize={groupSize} setGroupSize={setGroupSize} />
-      <WalkLengthQuestion walkLength={walkLength} setWalkLength={setWalkLength} />
+      <RegionQuestion region={region} setRegion={setRegion}/>
+      <SearchForm/>
+      <GroupSizeQuestion groupSize={groupSize} setGroupSize={setGroupSize}/>
+      <WalkLengthQuestion walkLength={walkLength} setWalkLength={setWalkLength}/>
     </div>
   )
 }
