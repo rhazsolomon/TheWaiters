@@ -24,9 +24,10 @@ export const App = () => {
   return (
     <div>
       <RegionQuestion region={region} setRegion={setRegion}/>
-      <SearchForm/>
+      <SearchForm setRegion={setRegion}/>
       <GroupSizeQuestion groupSize={groupSize} setGroupSize={setGroupSize}/>
       <WalkLengthQuestion walkLength={walkLength} setWalkLength={setWalkLength}/>
     </div>
   )
 }
+
