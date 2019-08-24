@@ -12,9 +12,10 @@ export const App = () => {
   return (
     <div className="question">
       <RegionQuestion region={region} setRegion={setRegion}/>
-      <SearchForm/>
+      <SearchForm setRegion={setRegion}/>
       <GroupSizeQuestion groupSize={groupSize} setGroupSize={setGroupSize}/>
       <WalkLengthQuestion walkLength={walkLength} setWalkLength={setWalkLength}/>
     </div>
   )
 }
+

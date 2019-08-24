@@ -17,7 +17,7 @@ export const SearchForm = (props) => {
                 <div>
                     <h1>Difficulty</h1>
                     <div>
-                        <button>Beginner</button>
+                        <button onClick={() => props.setLevel("Beginner")}>Beginner</button>
                         <button>Intermediate</button>
                         <button>Advanced</button>
                     </div>
