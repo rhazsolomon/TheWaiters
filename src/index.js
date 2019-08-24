@@ -15,7 +15,7 @@ function Form(props) {
 
   return (
     <form>
-      <h2>My Form</h2>
+      <h2 className="title">My Form</h2>
       <div>You clicked {counter} times!</div>
       <Button click={inc} text={props.buttonText} />
     </form>
