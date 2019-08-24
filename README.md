@@ -3,5 +3,11 @@
 
 Let's make an app!
 
+## How To Develop
 
-This is a change by Rhaz.
+```
+$ # have node.js installed
+$ npm i -g yarn
+$ yarn
+$ yarn start
+```
