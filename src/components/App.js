@@ -6,7 +6,7 @@ import { WalkLengthQuestion } from './WalkLengthQuestion'
 import { getMeHuts } from '../api_access'
 import { HuttCard } from './HutCard';
 import { CardsContainer } from "./CardsContainer";
-import hutData from "../data/huts.json"
+import rawHutData from "../data/huts.json"
 
 export const App = () => {
   const [region, setRegion] = useState(null);
@@ -15,7 +15,7 @@ export const App = () => {
   const [huts, setHuts] = useState(null);
   const [allRegions, setRegions] = useState(new Set());
 
-  // hutData = hutData.filter(hut => hut.region != null);
+  const hutData = rawHutData.filter(hut => hut.region != null);
 
   useEffect(() => {
     setHuts(hutData);
@@ -36,10 +36,11 @@ export const App = () => {
   return (
     <div>
       <RegionQuestion regions={[...allRegions]} region={region} setRegion={setRegion}/>
-      <SearchForm setRegion={setRegion}/>
-      <GroupSizeQuestion groupSize={groupSize} setGroupSize={setGroupSize}/>
-      <WalkLengthQuestion walkLength={walkLength} setWalkLength={setWalkLength}/>
         {huts == null ? 0 : <CardsContainer cardElements={huts}/>}
+      {/*<SearchForm setRegion={setRegion}/>*/}
+      {/*<GroupSizeQuestion groupSize={groupSize} setGroupSize={setGroupSize}/>*/}
+      {/*<WalkLengthQuestion walkLength={walkLength} setWalkLength={setWalkLength}/>*/}
+
     </div>
   )
 }

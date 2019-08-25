@@ -1,5 +1,6 @@
 body {
-  font: 15px/1.5 Proxima Nova, sans serif;
+  /*font: 15px/1.5 Proxima Nova, sans serif;*/
+  font-family: "ProximaNova", Chalkboard, sans-serif;
 }
 
 .question {
@@ -16,6 +17,11 @@ body {
 .q-text {
   padding: 30px;
   max-width: 200px;
+  text-align: left;
+  font: Bold 28px/34px Proxima Nova;
+  letter-spacing: 0;
+  color: #707070;
+  opacity: 1;
 }
 
 .q-input {
@@ -28,5 +34,33 @@ body {
 }
 
 .hutCardClass {
-  background: red;
+  list-style-type: none;
+  flex-shrink: 0;
+  flex-basis: 20%;
+  flex-grow: 0;
+  min-width: 260px;
+  min-height: 260px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+}
+
+.hutCardClass img {
+  width: 100%;
+
+}
+
+.hutName {
+  font-size: 28px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.hutRegion {
+  font-size: 18px;
+  margin: 0;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
 }

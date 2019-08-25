@@ -3,12 +3,10 @@ import {HutCard} from "./HutCard";
 
 export const CardsContainer = (props) => {
     var cardElements = props.cardElements
-    
+
     return (
-        <div>
-            <ul>
-                {cardElements.map(card => <HutCard hut={card}/>)}
-            </ul>
-        </div>
+        <ul className={"cards-container"}>
+            {cardElements.slice(0, 10).map(card => <HutCard key={card.name} hut={card}/>)}
+        </ul>
     )
 }

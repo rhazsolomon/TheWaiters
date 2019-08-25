@@ -17,3 +17,10 @@ export async function getMeHuts(region) {
         .then(jsonObjects => myFilteringFunction(jsonObjects, region))    
     return data;
 }
+
+export async function getHutDetails(hutID) {
+    const headers = { "x-api-key": "bU5t3d5QOv5V0QNWU36yp5nGDhEtmLDc6UbTfvPM" };
+    var data = await fetch(`https://api.doc.govt.nz/v2/huts/${hutID}/detail`, { headers })
+        .then(res => res.json())
+    return data;
+}
