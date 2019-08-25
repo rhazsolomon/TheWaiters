@@ -18,10 +18,12 @@ export const HutCard = (props) => {
 
     return (
         <li className={"hutCardClass"}>
-            <img src={details == null ? "http://via.placeholder.com/300" : details.introductionThumbnail}></img>
-            <p className={"hutName"}>{props.hut.name}</p>
-            <p className={"hutRegion"}>{props.hut.region}</p>
-            <p>{details == null ? "Details is Null" : "Number of bunks: " + details.numberOfBunks}</p>
+            <a href={details == null ? "" : details.staticLink}>
+                <img src={details == null ? "https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" : details.introductionThumbnail}></img>
+                <p className={"hutName"}>{props.hut.name}</p>
+                <p className={"hutRegion"}>{props.hut.region}</p>
+                <p>{details == null ? "Details is Null" : "Number of bunks: " + details.numberOfBunks}</p>
+            </a>
         </li>
     )
 };
