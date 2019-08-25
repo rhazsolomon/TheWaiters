@@ -10,8 +10,40 @@ export const App = () => {
   const [groupSize, setGroupSize] = useState(null)
   const [track, setTrack] = useState(null)
 
+  const goToRegion = () => {
+    setRegions(null)
+    setGroupSize(null)
+    setTrack(null)
+  }
+
+  const goToGroupSize = () => {
+    setGroupSize(null)
+    setTrack(null)
+  }
+
+  const goToTrack = () => {
+    setTrack(null)
+  }
+
+  const goToHuts = () => {}
+
   return (
-    <div>
+    <div className="app">
+      <nav>
+        <ul>
+          <li className={!regions ? 'selected' : 'clickable'} onClick={() => goToRegion()}></li>
+          <li
+            className={regions && !groupSize ? 'selected' : groupSize ? 'clickable' : ''}
+            onClick={() => goToGroupSize()}
+          ></li>
+          <li
+            className={groupSize && !track ? 'selected' : track ? 'clickable' : ''}
+            onClick={() => goToTrack()}
+          ></li>
+          <li className={track ? 'selected' : ''} onClick={() => goToHuts()}></li>
+        </ul>
+      </nav>
+
       {!regions ? (
         <RegionQuestion setRegion={setRegions} />
       ) : !groupSize ? (

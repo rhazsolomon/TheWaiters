@@ -1,3 +1,9 @@
+html,
+body,
+#app {
+  height: 100%;
+}
+
 body {
   /*font: 15px/1.5 Proxima Nova, sans serif;*/
   font-family: ProximaNova, Proxima Nova, sans-serif;
@@ -170,4 +176,41 @@ body {
 
 .fav-btn {
   background-color: rgb(111, 138, 60);
+}
+
+.app {
+  display: flex;
+}
+
+.app :nth-child(2) {
+  flex: 1;
+}
+
+nav {
+  height: calc(100vh - 20px);
+}
+
+nav ul {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+nav li {
+  width: 10px;
+  background: #ddd;
+  flex: 1;
+  margin-bottom: 5px;
+}
+
+nav li.selected {
+  background: rgb(111, 138, 60);
+}
+
+nav li.clickable {
+  background: #bbb;
+  cursor: pointer;
 }

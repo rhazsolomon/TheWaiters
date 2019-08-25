@@ -24,7 +24,11 @@ export const HutCard = props => {
       <p className={'hutRegion'}>{props.hut.region}</p>
       <p>{details == null ? ' ' : details.numberOfBunks + ' bunks'}</p>
       <div className="actions">
-        <a className="btn detail-btn" href={details == null ? '' : details.staticLink}>
+        <a
+          className="btn detail-btn"
+          target="_blank"
+          href={details == null ? '' : details.staticLink}
+        >
           Details
         </a>
         <a className="btn fav-btn" onClick={() => props.toggleSelectedHut(props.hut)}>
