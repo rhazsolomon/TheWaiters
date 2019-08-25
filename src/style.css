@@ -89,7 +89,7 @@ body {
 }
 
 .track:hover {
-  background-color: #e9e9e9;
+  background-color: #ddd;
   cursor: pointer;
 }
 
@@ -108,5 +108,31 @@ body {
 #g3628:hover *,
 #g4704:hover * {
   fill: #777 !important;
+  cursor: pointer;
+}
+
+.group-size-opts {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 500px;
+}
+
+.group-size-opt {
+  list-style-type: none;
+  background-color: #eee;
+  padding: 0 20px;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 25px;
+  color: #666;
+  border-radius: 50%;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0 20px 20px 0;
+}
+
+.group-size-opt:hover {
+  background-color: #ddd;
   cursor: pointer;
 }
