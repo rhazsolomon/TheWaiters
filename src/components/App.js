@@ -34,18 +34,20 @@ export const App = () => {
   return (
     <div className="app">
       <nav>
-        <ul>
-          <li className={!regions ? 'selected' : 'clickable'} onClick={() => goToRegion()}></li>
-          <li
-            className={regions && !groupSize ? 'selected' : groupSize ? 'clickable' : ''}
-            onClick={() => goToGroupSize()}
-          ></li>
-          <li
-            className={groupSize && !track ? 'selected' : track ? 'clickable' : ''}
-            onClick={() => goToTrack()}
-          ></li>
-          <li className={track ? 'selected' : ''} onClick={() => goToHuts()}></li>
-        </ul>
+        {started ? (
+          <ul>
+            <li className={!regions ? 'selected' : 'clickable'} onClick={() => goToRegion()}></li>
+            <li
+              className={regions && !groupSize ? 'selected' : groupSize ? 'clickable' : ''}
+              onClick={() => goToGroupSize()}
+            ></li>
+            <li
+              className={groupSize && !track ? 'selected' : track ? 'clickable' : ''}
+              onClick={() => goToTrack()}
+            ></li>
+            <li className={track ? 'selected' : ''} onClick={() => goToHuts()}></li>
+          </ul>
+        ) : null}
       </nav>
 
       {!started ? (

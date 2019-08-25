@@ -17,7 +17,9 @@ export const HutSelector = ({ track }) => {
 
   return (
     <div className="question">
-      <div className="q-number">04</div>
+      <div className="q-number">
+        04<div className="fabulous-btn">♥</div>
+      </div>
       <div className="q-text">Where would you like to stay?</div>
       <div className="q-input">
         {/* <HutCart selectedHuts={selectedHuts} toggleSelectedHut={toggleSelectedHut} /> */}
