@@ -7,7 +7,6 @@ export const RegionQuestion = (props) => {
 
     return (
         <div className="question">
-            <div>{props.region}</div>
             <div className="q-number">
                 01
             </div>
