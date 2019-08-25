@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7309f0d7-8cdb-4fa6-876f-ad7c562eb130" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/data/huts-with-track-ids.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/HutCart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CardsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CardsContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/HutCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HutCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RegionQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RegionQuestion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +32,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/basic" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -36,6 +40,11 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -60,7 +69,7 @@
       <option name="presentableId" value="Default" />
       <updated>1566610684763</updated>
       <workItem from="1566610685897" duration="2780000" />
-      <workItem from="1566681473458" duration="8912000" />
+      <workItem from="1566681473458" duration="14887000" />
     </task>
     <servers />
   </component>
