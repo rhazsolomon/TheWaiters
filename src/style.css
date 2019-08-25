@@ -1,44 +1,44 @@
-html, body, #app {
+html,
+body,
+#app {
   height: 100%;
 }
 
 .frontpage .header {
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .frontpage {
   height: 100%;
-  background:
-    url("img/Trees.png") 0% 100% no-repeat,
-    url("img/Trees.png") 100% 100% no-repeat,
+  background: url('img/Trees.png') 0% 100% no-repeat, url('img/Trees.png') 100% 100% no-repeat,
     linear-gradient(to bottom, transparent calc(100% - 14px), rgb(111, 138, 60) calc(100% - 14px));
-  background-size: 475px;  
+  background-size: 475px;
 }
 
-.mainHutImg{
+.mainHutImg {
   width: 150px;
 }
 
-.textLogo{
+.textLogo {
   padding-left: 15px;
   font-size: 20px;
 }
 
-.beginButton{
- background-color: rgb(111, 138, 60);
- border: none;
- color: white;
- padding: 15px 32px;
- text-align: center;
- text-decoration: none;
- display: inline-block;
- font-size: 16px;
- border-radius: 4px;
+.beginButton {
+  background-color: rgb(111, 138, 60);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
 }
 
-.frontpage{ 
- text-align: center;
+.frontpage {
+  text-align: center;
 }
 
 body {
@@ -121,18 +121,16 @@ body {
   height: 50px;
 }
 
-.mainTitle{
+.mainTitle {
   color: rgb(111, 138, 60);
   font-size: 60px;
-
 }
 
-.mainMessage{
+.mainMessage {
   color: rgb(140, 140, 140);
   font-size: 20px;
   line-height: 1.3;
-  padding: 4%
-}
+  padding: 4%;
 }
 
 .cardItem {
@@ -243,7 +241,7 @@ body {
   display: flex;
 }
 
-.app :nth-child(2) {
+.app > :nth-child(2) {
   flex: 1;
 }
 

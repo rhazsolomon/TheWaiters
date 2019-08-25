@@ -2,13 +2,17 @@ import React, { useState, useEffect } from 'react'
 import { RegionQuestion } from './RegionQuestion'
 import { GroupSizeQuestion } from './GroupSizeQuestion'
 import { TrackSelector } from './TrackSelector'
+import { Homepage } from './Homepage'
 import { HutSelector } from './HutSelector'
 import huts from '../data/huts-with-track-ids'
 
 export const App = () => {
+  const [started, setStarted] = useState(false)
   const [regions, setRegions] = useState(null)
   const [groupSize, setGroupSize] = useState(null)
   const [track, setTrack] = useState(null)
+
+  const start = () => setStarted(true)
 
   const goToRegion = () => {
     setRegions(null)
@@ -44,7 +48,9 @@ export const App = () => {
         </ul>
       </nav>
 
-      {!regions ? (
+      {!started ? (
+        <Homepage start={start} />
+      ) : !regions ? (
         <RegionQuestion setRegion={setRegions} />
       ) : !groupSize ? (
         <GroupSizeQuestion setGroupSize={setGroupSize} />
