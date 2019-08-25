@@ -5,7 +5,7 @@ export const GroupSizeQuestion = props => {
     <div className="question">
       <div>{props.groupSize}</div>
       <div className="q-number">02</div>
-      <div className="q-text">How many Adventurers?</div>
+      <div className="q-text">How many adventurers?</div>
       <div className="q-input">
         <ul className="group-size-opts">
           <li className="group-size-opt" onClick={() => props.setGroupSize('1')}>
