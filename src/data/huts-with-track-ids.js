@@ -12,14 +12,16 @@ const reducer = (best, candidate) => {
     : best
 }
 
-export default huts.map(hut => {
-  const bestTrack = tracks
-    .map(track => withDistanceToHut(track, hut))
-    .reduce(reducer)
-    .track
+export default huts
+  .filter(hut => hut.region != null)
+  .map(hut => {
+    const bestTrack = tracks
+      .map(track => withDistanceToHut(track, hut))
+      .reduce(reducer)
+      .track
 
-  return {
-    ...hut,
-    trackId: bestTrack.id
-  }
-})
+    return {
+      ...hut,
+      trackId: bestTrack.id
+    }
+  })
