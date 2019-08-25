@@ -18,7 +18,7 @@ export const HutCard = (props) => {
 
     return (
         <li className={"hutCardClass"}>
-            <img src="http://via.placeholder.com/300"></img>
+            <img src={details == null ? "http://via.placeholder.com/300" : details.introductionThumbnail}></img>
             <p className={"hutName"}>{props.hut.name}</p>
             <p className={"hutRegion"}>{props.hut.region}</p>
             <p>{details == null ? "Details is Null" : "Number of bunks: " + details.numberOfBunks}</p>
