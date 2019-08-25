@@ -16,7 +16,7 @@ body {
 
 .q-text {
   padding: 30px;
-  max-width: 200px;
+  max-width: 280px;
   text-align: left;
   font: Bold 28px/34px Proxima Nova;
   letter-spacing: 0;
@@ -90,5 +90,23 @@ body {
 
 .track:hover {
   background-color: #e9e9e9;
+  cursor: pointer;
+}
+
+#g4755:hover *,
+#g4717:hover *,
+#g4701:hover *,
+#path3547:hover,
+#g4698:hover *,
+#g4692:hover *,
+#g4776:hover *,
+#path3555:hover,
+#g3470:hover *,
+#g3585:hover *,
+#g4695:hover *,
+#g4750:hover *,
+#g3628:hover *,
+#g4704:hover * {
+  fill: #777 !important;
   cursor: pointer;
 }
