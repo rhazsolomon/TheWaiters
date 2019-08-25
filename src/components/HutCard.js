@@ -12,7 +12,7 @@ export const HutCard = props => {
   }, [props.hut.assetId])
 
   return (
-    <li className={'hutCardClass'}>
+    <li className="hut-card">
       <img
         src={
           details == null
@@ -22,9 +22,15 @@ export const HutCard = props => {
       ></img>
       <p className={'hutName'}>{props.hut.name}</p>
       <p className={'hutRegion'}>{props.hut.region}</p>
-      <p>{details == null ? 'Details is Null' : 'Number of bunks: ' + details.numberOfBunks}</p>
-      <a href={details == null ? '' : details.staticLink}>Click here for more details.</a>
-      <button onClick={() => props.toggleSelectedHut(props.hut)}>Add to cart</button>
+      <p>{details == null ? ' ' : details.numberOfBunks + ' bunks'}</p>
+      <div className="actions">
+        <a className="btn detail-btn" href={details == null ? '' : details.staticLink}>
+          Details
+        </a>
+        <a className="btn fav-btn" onClick={() => props.toggleSelectedHut(props.hut)}>
+          ♡
+        </a>
+      </div>
     </li>
   )
 }
